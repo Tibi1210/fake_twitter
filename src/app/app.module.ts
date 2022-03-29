@@ -10,6 +10,8 @@ import { ToptitleComponent } from './shared/toptitle/toptitle.component';
 import { TopsearchComponent } from './shared/topsearch/topsearch.component';
 import { RightboxComponent } from './shared/rightbox/rightbox.component';
 import { BottommenuComponent } from './shared/bottommenu/bottommenu.component';
+import { MainComponent } from './pages/main/main.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { BottommenuComponent } from './shared/bottommenu/bottommenu.component';
     ToptitleComponent,
     TopsearchComponent,
     RightboxComponent,
-    BottommenuComponent
+    BottommenuComponent,
+    MainComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

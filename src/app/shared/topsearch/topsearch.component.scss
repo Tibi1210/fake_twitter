@@ -28,3 +28,7 @@ $lila: #7856ff;
 .btn:hover{
   background: $lila;
 }
+
+*:focus {
+  outline: none;
+} 

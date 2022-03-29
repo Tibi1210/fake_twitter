@@ -1,0 +1,58 @@
+$szurke: #202327;
+$lila: #7856ff;
+
+.login {
+  padding: 20px;
+  border-style: solid;
+  border-color: $lila;
+  border-radius: 25px;
+}
+
+.row {
+  margin-top: 10%;
+}
+.image {
+  margin: 0 auto 0 auto;
+  width: max-content;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+img {
+  height: 40px;
+  width: 50px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.btnSubmit {
+  width: 100%;
+  color: black;
+  background-color: #fff;
+  border-style: solid;
+  border-color: #fff;
+  border-radius: 25px;
+  padding: 2%;
+  font-weight: bolder;
+}
+
+.btnSubmit:hover {
+    color: white;
+    background-color: $lila;
+  }
+
+.btnForgetPwd {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btnForgetPwd:hover {
+    text-decoration: underline;
+  }
