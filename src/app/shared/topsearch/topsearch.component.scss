@@ -3,35 +3,41 @@ $lila: #7856ff;
 
 .navbar {
   background-color: black;
+  font-size:14pt;
+  height: 80px;
 }
 
 .searchbar {
+    margin: 0 auto 0 auto;
   background-color: $szurke;
   border-radius: 50px;
   width: max-content;
+  padding-left: 10px;
 }
 
 .search_input {
   color: white;
+  height: 50px;
   border: 0;
   outline: 0;
   background: none;
   caret-color: transparent;
-  float: right;
   caret-color: $lila;
 }
 
-  .searchbar:hover > .search_icon {
+.searchbar:hover > .search_icon {
     background: $lila;
-    color: white;
-  }
+}
 
+.search_input:focus {
+  $alma: true;
+}
 
 .search_icon {
-  float: left;
-  margin-right: 10px;
-  height: 30px;
-  width: 30px;
+    float: right;
+  margin-left: 10px;
+  height: 50px;
+  width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
