@@ -8,6 +8,11 @@ $lila: #7856ff;
   border-radius: 25px;
 }
 
+.form-control{
+  border: none;
+  background-color: $szurke;
+}
+
 .row {
   margin-top: 10%;
 }
@@ -23,36 +28,38 @@ img {
 }
 
 .form-group {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 h3 {
   text-align: center;
   margin-bottom: 25px;
-  color: #fff;
+  color: whitesmoke;
 }
 
 .btnSubmit {
   width: 100%;
   color: black;
-  background-color: #fff;
+  background-color: whitesmoke;
   border-style: solid;
-  border-color: #fff;
+  border-color: whitesmoke;
   border-radius: 25px;
   padding: 2%;
   font-weight: bolder;
 }
 
 .btnSubmit:hover {
-    color: white;
+    color: whitesmoke;
     background-color: $lila;
+    border-color: $lila;
   }
 
 .btnForgetPwd {
-  color: #fff;
+  color: whitesmoke;
   text-decoration: none;
 }
 
 .btnForgetPwd:hover {
+  color: $lila;
     text-decoration: underline;
   }
