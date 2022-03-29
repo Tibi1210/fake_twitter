@@ -1,13 +1,17 @@
 $lila: #7856FF;
 
-a:link, a:visited, a:active{
+a:visited,a:link,a:active{
     background-color: black;
     color: white;
 }
 
+.navbar-toggler{
+    background-color: $lila;
+}
+
 a:hover{
     background-color: $lila;
-    color: white;
+    color: black;
 }
 
 .dropdown-menu{
