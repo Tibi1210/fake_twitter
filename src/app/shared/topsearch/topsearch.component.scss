@@ -1,0 +1,41 @@
+$szurke: #202327;
+$lila: #7856ff;
+
+.navbar {
+  background-color: black;
+}
+
+.searchbar {
+  background-color: $szurke;
+  border-radius: 50px;
+  width: max-content;
+}
+
+.search_input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  caret-color: transparent;
+  float: right;
+  caret-color: $lila;
+}
+
+  .searchbar:hover > .search_icon {
+    background: $lila;
+    color: white;
+  }
+
+
+.search_icon {
+  float: left;
+  margin-right: 10px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+}

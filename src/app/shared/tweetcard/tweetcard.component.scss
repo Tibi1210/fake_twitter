@@ -1,5 +1,6 @@
 $szurke: #080808;
 $vilagosszurke: #333639;
+$btn_szurke: #5c5c5c;
 
 a:link,
 a:visited,
@@ -17,7 +18,7 @@ a:hover {
 .card {
   background-color: black;
   color: white;
-
+  margin-bottom: 5px;
   border-color: $vilagosszurke;
   border-width: 2px;
   border-radius: 20px;
@@ -63,6 +64,7 @@ img {
     text-align: center;
     a {
       padding: 2px 20px 2px 20px;
+      color: $btn_szurke;
     }
     a:hover {
       color: red;
@@ -79,6 +81,7 @@ img {
   text-align: center;
   a {
     padding: 2px 20px 2px 20px;
+    color: $btn_szurke;
   }
   a:hover {
     color: #1d9bf0;
