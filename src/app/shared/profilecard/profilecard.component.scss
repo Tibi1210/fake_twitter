@@ -56,18 +56,25 @@ a:hover {
 }
 .profileimage:hover {
   box-shadow: 3px 4px 3px 1px black;
+  -webkit-filter: brightness(90%);
 }
 
 .bannerimage {
   margin-bottom: 10px;
 }
+
+.bannerimage:hover {
+    margin-bottom: 10px;
+    -webkit-filter: brightness(90%);
+  }
+
 .username {
   font-size: 16pt;
   font-weight: bold;
 }
 .usertag {
   font-size: 12pt;
-  color: #333639;
+  color: #474747;
 }
 .bio {
   margin-top: 10px;

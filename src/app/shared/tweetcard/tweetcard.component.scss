@@ -41,6 +41,7 @@ img {
 }
 .image:hover {
   box-shadow: 3px 4px 3px 1px black;
+  -webkit-filter: brightness(90%);
 }
 
 .name {
@@ -63,7 +64,7 @@ img {
     border-radius: 50px;
     text-align: center;
     a {
-      padding: 2px 20px 2px 20px;
+      padding: 3px 20px 3px 20px;
       color: $btn_szurke;
     }
     a:hover {
@@ -80,7 +81,7 @@ img {
   border-radius: 50px;
   text-align: center;
   a {
-    padding: 2px 20px 2px 20px;
+    padding: 3px 20px 3px 20px;
     color: $btn_szurke;
   }
   a:hover {
