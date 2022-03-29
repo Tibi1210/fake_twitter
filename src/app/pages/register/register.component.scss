@@ -1,7 +1,7 @@
 $szurke: #202327;
 $lila: #7856ff;
 
-.login {
+.register {
   padding: 20px;
   border-style: solid;
   border-color: $lila;
@@ -11,9 +11,10 @@ $lila: #7856ff;
 .form-control{
   border: none;
   background-color: $szurke;
+  color: whitesmoke;
 }
 
-.row {
+.rowmargin {
   margin-top: 10%;
 }
 .image {
@@ -58,12 +59,3 @@ h3 {
     border-color: $lila;
   }
 
-.btnForgetPwd {
-  color: whitesmoke;
-  text-decoration: none;
-}
-
-.btnForgetPwd:hover {
-  color: $lila;
-    text-decoration: underline;
-  }
