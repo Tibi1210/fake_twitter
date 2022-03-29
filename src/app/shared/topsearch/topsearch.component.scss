@@ -3,44 +3,31 @@ $lila: #7856ff;
 
 .navbar {
   background-color: black;
-  font-size:14pt;
-  height: 80px;
+  font-size: 14pt;
+  height: 65px;
 }
 
-.searchbar {
-    margin: 0 auto 0 auto;
-  background-color: $szurke;
-  border-radius: 50px;
-  width: max-content;
-  padding-left: 10px;
-}
-
-.search_input {
-  color: white;
-  width: 140px;
-  float: left;
-  box-sizing:content-box;
+.form-control{
+  caret-color: $lila;
+  background: $szurke;
   height: 50px;
   border: 0;
-  outline: 0;
-  background: none;
-  caret-color: transparent;
-  caret-color: $lila;
+  color: white;
+  border-radius: 25px 0px 0px 25px;
 }
 
-.searchbar:hover > .search_icon {
-    background: $lila;
-}
 
-.search_input:focus {
-  $alma: true;
-}
-
-.search_icon {
-    float: right;
-  margin-left: 10px;
+.btn{
   height: 50px;
   width: 50px;
+  border-radius: 0px 25px 25px 0px;
+  background: $szurke;
+  border: none;
+}
+.search_icon {
+  float: right;
+  margin-left: 10px;
+  
   display: flex;
   justify-content: center;
   align-items: center;

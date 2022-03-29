@@ -8,6 +8,7 @@ import { TweetcardComponent } from './shared/tweetcard/tweetcard.component';
 import { LeftmenuComponent } from './shared/leftmenu/leftmenu.component';
 import { ToptitleComponent } from './shared/toptitle/toptitle.component';
 import { TopsearchComponent } from './shared/topsearch/topsearch.component';
+import { RightboxComponent } from './shared/rightbox/rightbox.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TopsearchComponent } from './shared/topsearch/topsearch.component';
     TweetcardComponent,
     LeftmenuComponent,
     ToptitleComponent,
-    TopsearchComponent
+    TopsearchComponent,
+    RightboxComponent
   ],
   imports: [
     BrowserModule,
