@@ -1,0 +1,44 @@
+$szurke: #181818;
+
+.menu {
+  position: sticky;
+  top: 60px;
+  padding-top: 20px;
+}
+.image {
+  margin: 0 auto 0 auto;
+  width: max-content;
+  margin-bottom: 30px;
+}
+img {
+  height: 40px;
+  width: 50px;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.home {
+  font-weight: bold;
+}
+
+.link {
+  margin: 0 auto 0 auto;
+  width: max-content;
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: large;
+  a {
+    padding: 2px 20px 2px 20px;
+  }
+  a:hover {
+    border-radius: 50px;
+    background-color: $szurke;
+    text-shadow: 2px 2px 4px black;
+  }
+}

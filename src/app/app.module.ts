@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopmenuComponent } from './shared/topmenu/topmenu.component';
 import { TweetcardComponent } from './shared/tweetcard/tweetcard.component';
+import { LeftmenuComponent } from './shared/leftmenu/leftmenu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopmenuComponent,
-    TweetcardComponent
+    TweetcardComponent,
+    LeftmenuComponent
   ],
   imports: [
     BrowserModule,
