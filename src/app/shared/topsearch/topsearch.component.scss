@@ -23,15 +23,8 @@ $lila: #7856ff;
   border-radius: 0px 25px 25px 0px;
   background: $szurke;
   border: none;
-}
-.search_icon {
-  float: right;
-  margin-left: 10px;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
   color: white;
-  text-decoration: none;
+}
+.btn:hover{
+  background: $lila;
 }

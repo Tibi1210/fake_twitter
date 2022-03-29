@@ -4,8 +4,23 @@ $vilagosszurke: #1D1F23;
 .card{
     background-color: $szurke;
     font-weight: bold;
-    font-size: 14pt;
+    border-radius: 25px;
+    padding: 10px 0px 20px 0px;
+    margin-bottom: 10px;
 }
 .title{
     font-size: 18pt;
+    padding-left: 15px;
+}
+
+.element{
+        background-color: $szurke;
+        color: white;
+        padding: 20px 10px 20px 10px;
+        text-decoration: none;
+        font-size: 14pt;
+        padding-left: 20px;
+}
+.element:hover{
+    background-color: $vilagosszurke;
 }
