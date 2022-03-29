@@ -9,6 +9,7 @@ import { LeftmenuComponent } from './shared/leftmenu/leftmenu.component';
 import { ToptitleComponent } from './shared/toptitle/toptitle.component';
 import { TopsearchComponent } from './shared/topsearch/topsearch.component';
 import { RightboxComponent } from './shared/rightbox/rightbox.component';
+import { BottommenuComponent } from './shared/bottommenu/bottommenu.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RightboxComponent } from './shared/rightbox/rightbox.component';
     LeftmenuComponent,
     ToptitleComponent,
     TopsearchComponent,
-    RightboxComponent
+    RightboxComponent,
+    BottommenuComponent
   ],
   imports: [
     BrowserModule,
