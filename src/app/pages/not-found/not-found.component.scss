@@ -1,0 +1,29 @@
+$szurke: #202327;
+$lila: #7856ff;
+
+.notfound {
+  padding: 20px;
+  border-style: solid;
+  border-color: $lila;
+  border-radius: 25px;
+}
+
+.row {
+  margin-top: 10%;
+}
+.image {
+  margin: 0 auto 0 auto;
+  width: max-content;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+img {
+  height: 40px;
+  width: 50px;
+}
+
+h4, h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: whitesmoke;
+}
