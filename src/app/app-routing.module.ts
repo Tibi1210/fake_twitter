@@ -38,11 +38,13 @@ const routes: Routes = [
       ),
   }, 
   {
+    path: '',
+    redirectTo: '/home',
+    pathMatch:'full'
+  },
+  {
     path: '**',
-    loadChildren: () =>
-      import('./pages/not-found/not-found.module').then(
-        (m) => m.NotFoundModule
-      ),
+    redirectTo: '/not-found'
   },
 ];
 

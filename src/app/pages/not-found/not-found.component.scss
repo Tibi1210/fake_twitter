@@ -27,3 +27,12 @@ h4, h1 {
   margin-bottom: 25px;
   color: whitesmoke;
 }
+
+a{
+    text-decoration: underline;
+    color: whitesmoke;
+    font-weight: bold;
+}
+a:hover{
+    color: $lila;
+}
