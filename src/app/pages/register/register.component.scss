@@ -59,3 +59,15 @@ h3 {
     border-color: $lila;
   }
 
+  
+.btnForgetPwd {
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.btnForgetPwd:hover {
+  color: $lila;
+    text-decoration: underline;
+  }

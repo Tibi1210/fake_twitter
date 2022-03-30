@@ -8,7 +8,7 @@ $lila: #7856ff;
   border-radius: 25px;
 }
 
-.form-control{
+.form-control {
   border: none;
   background-color: $szurke;
 }
@@ -30,8 +30,8 @@ img {
 input {
   margin-bottom: 10px;
 }
-label{
-    margin-bottom: 5px;
+label {
+  margin-bottom: 5px;
 }
 
 h3 {
@@ -53,17 +53,30 @@ h3 {
 }
 
 .btnSubmit:hover {
-    color: whitesmoke;
-    background-color: $lila;
-    border-color: $lila;
-  }
+  color: whitesmoke;
+  background-color: $lila;
+  border-color: $lila;
+}
 
 .btnForgetPwd {
   color: whitesmoke;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .btnForgetPwd:hover {
   color: $lila;
-    text-decoration: underline;
-  }
+  text-decoration: underline;
+}
+
+.floatright {
+  width: 100%;
+
+}
+.registerlink {
+  margin-left: 10px;
+}
+.links{
+  text-align: center;
+  margin-top: -0px;
+}
