@@ -11,7 +11,6 @@ import { TopsearchComponent } from './shared/topsearch/topsearch.component';
 import { RightboxComponent } from './shared/rightbox/rightbox.component';
 import { BottommenuComponent } from './shared/bottommenu/bottommenu.component';
 import { MainComponent } from './pages/main/main.component';
-import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProfilecardComponent } from './shared/profilecard/profilecard.component';
 
@@ -26,7 +25,6 @@ import { ProfilecardComponent } from './shared/profilecard/profilecard.component
     RightboxComponent,
     BottommenuComponent,
     MainComponent,
-    RegisterComponent,
     ProfileComponent,
     ProfilecardComponent
   ],

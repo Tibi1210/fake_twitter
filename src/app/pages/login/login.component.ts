@@ -8,7 +8,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-signUpForm =new FormGroup({
+  loginForm =new FormGroup({
   email: new FormControl(''),
   passwd: new FormControl('')
 })
@@ -19,7 +19,7 @@ signUpForm =new FormGroup({
   }
 
   login(){
-    console.log(this.signUpForm.value)
+    console.log(this.loginForm.value)
 
   }
 

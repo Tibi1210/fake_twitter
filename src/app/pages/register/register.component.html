@@ -2,7 +2,7 @@
   <div class="row rowmargin">
     <div class="col-sm-1 col-md-3 col-lg-4"></div>
     <div class="col-sm-10 col-md-6 col-lg-4">
-      <form class="register">
+      <form class="register" [formGroup]="registerForm" (ngSubmit)="register()">
         <div class="image"><img src="../../../assets/image/logo.png" /></div>
         <h3>Register</h3>
 
@@ -14,13 +14,14 @@
                 type="text"
                 class="form-control"
                 placeholder="Username"
+                formControlName="username"
               />
             </div>
           </div>
           <div class="col">
             <div class="form-group">
               <label for="formGroupExampleInput">User @:</label>
-              <input type="text" class="form-control" placeholder="@User" />
+              <input type="text" class="form-control" placeholder="@User" formControlName="userat"/>
             </div>
           </div>
         </div>
@@ -32,6 +33,7 @@
                   type="text"
                   class="form-control"
                   placeholder="E-mail"
+                  formControlName="email"
                 />
               </div>
           </div>
@@ -44,16 +46,18 @@
                   type="password"
                   class="form-control"
                   placeholder="Password"
+                  formControlName="passwd"
                 />
               </div>
           </div>
           <div class="col">
             <div class="form-group">
-                <label for="formGroupExampleInput">Password Again:</label>
+                <label for="formGroupExampleInput">Comfirm Password:</label>
                 <input
                   type="password"
                   class="form-control"
                   placeholder="Password Again"
+                  formControlName="passwd_comfirm"
                 />
               </div>
           </div>
