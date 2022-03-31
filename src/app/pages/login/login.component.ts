@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserLogin } from 'src/app/models/UserLogin';
 
 @Component({
   selector: 'app-login',
@@ -8,19 +10,21 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm =new FormGroup({
-  email: new FormControl(''),
-  passwd: new FormControl('')
-})
+  loginForm = this.createForm({
+    email: '',
+    passwd: '',
+  })
 
-  constructor() { }
+  constructor(private fb: FormBuilder,private router: Router) { }
 
   ngOnInit(): void {
   }
-
+  createForm(model: UserLogin){
+    return this.fb.group(model);
+  }
   login(){
     console.log(this.loginForm.value)
-
+    this.router.navigateByUrl('home');
   }
 
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from 'src/app/models/User';
+import { UserRegister } from 'src/app/models/UserRegister';
 
 @Component({
   selector: 'app-register',
@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  createForm(model: User){
+  createForm(model: UserRegister){
     return this.fb.group(model);
   }
 
