@@ -1,28 +1,34 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { User } from 'src/app/models/User';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
 
-  registerForm=new FormGroup({
-    username: new FormControl(''),
-    userat: new FormControl(''),
-    email: new FormControl(''),
-    passwd: new FormControl(''),
-    passwd_comfirm: new FormControl(''),
+  registerForm = this.createForm({
+    username: '',
+    userat: '',
+    email: '',
+    passwd: '',
+    passwd_comfirm: ''
   })
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private fb: FormBuilder, private router: Router) {
   }
 
-  register(){
+  ngOnInit(): void {}
+
+  createForm(model: User){
+    return this.fb.group(model);
+  }
+
+  register() {
     console.log(this.registerForm.value)
+    this.router.navigateByUrl('login');
   }
-
 }
