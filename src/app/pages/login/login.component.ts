@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserLogin } from 'src/app/models/UserLogin';
 
@@ -20,11 +20,18 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   createForm(model: UserLogin){
-    return this.fb.group(model);
+    let fg =this.fb.group(model);
+    fg.get('email')?.addValidators([Validators.required, Validators.minLength(5)]);
+    fg.get('passwd')?.addValidators([Validators.required, Validators.minLength(10)]);
+    return fg;
   }
   login(){
-    console.log(this.loginForm.value)
-    this.router.navigateByUrl('home');
+    if(this.loginForm.valid){
+      console.log(this.loginForm.value)
+      this.router.navigateByUrl('home');
+    }else{
+      console.log("fail")
+    }
   }
 
 }

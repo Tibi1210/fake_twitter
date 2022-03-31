@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserRegister } from 'src/app/models/UserRegister';
+
 
 @Component({
   selector: 'app-register',
@@ -24,11 +25,23 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   createForm(model: UserRegister){
-    return this.fb.group(model);
+    let fg =this.fb.group(model);
+    fg.get('username')?.addValidators([Validators.required, Validators.minLength(5)]);
+    fg.get('userat')?.addValidators([Validators.required, Validators.minLength(5)]);
+    fg.get('email')?.addValidators([Validators.required]);
+    fg.get('passwd')?.addValidators([Validators.required, Validators.minLength(10)]);
+    fg.get('passwd_comfirm')?.addValidators([Validators.required, Validators.minLength(10)]);
+    
+    return fg;
   }
 
   register() {
-    console.log(this.registerForm.value)
-    this.router.navigateByUrl('login');
+    if(this.registerForm.valid){
+      console.log(this.registerForm.value)
+      this.router.navigateByUrl('login');
+    }else{
+      console.log("fail")
+    }
+    
   }
 }
