@@ -1,23 +1,35 @@
-<form class="card" action="#0">
-    <table>
-      <tr>
-        <td class="leftcol"><div class="image"><a [routerLink]="'/profile'"><img src="../../../assets/image/kep.jpg" /></a></div></td>
-        <td colspan="2"><a [routerLink]="'/profile'" class="name">Tibi</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td colspan="2">
-          <div class="grow-wrap">
-            <textarea maxlength="250" rows="1" onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td><div class="post"><a href="posted">Post</a></div></td>
-      </tr>
-    </table>
-  </form>
-  <script src="novel.js"></script> 
-  
+<form class="card" [formGroup]="postForm" (ngSubmit)="post()">
+  <table>
+    <tr>
+      <td class="leftcol">
+        <div class="image">
+          <a [routerLink]="'/profile'"
+            ><img src="../../../assets/image/kep.jpg"
+          /></a>
+        </div>
+      </td>
+      <td colspan="2"><a [routerLink]="'/profile'" class="name">Tibi</a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td colspan="2">
+        <div class="grow-wrap">
+          <textarea
+            maxlength="250"
+            rows="1"
+            placeholder="What's happening?"
+            formControlName="text"
+            onInput="this.parentNode.dataset.replicatedValue = this.value"
+          ></textarea>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>
+        <div class="post"><input type="submit" value="Post" ></div>
+      </td>
+    </tr>
+  </table>
+</form>

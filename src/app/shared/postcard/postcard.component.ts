@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Post } from 'src/app/models/Post';
 
 @Component({
   selector: 'app-postcard',
@@ -8,16 +9,25 @@ import { Validators } from '@angular/forms';
 })
 export class PostcardComponent implements OnInit {
 
+  postForm = this.createForm({
+    text: '',
+  })
 
-
-  constructor() { }
+  constructor(private fb: FormBuilder,) { }
 
   ngOnInit(): void {
   }
 
-
-
-  login(){
-
+  createForm(model: Post){
+    let fg =this.fb.group(model);
+    fg.get('text')?.addValidators([Validators.required]);
+    return fg;
+  }
+  post(){
+    if(this.postForm.valid){
+      console.log(this.postForm.value)
+    }else{
+      console.log("fail")
+    }
   }
 }

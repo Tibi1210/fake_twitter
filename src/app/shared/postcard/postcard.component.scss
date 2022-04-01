@@ -3,7 +3,6 @@ $vilagosszurke: #333639;
 $btn_szurke: #6e6e6e;
 $lila: #7856ff;
 
-
 a:link,
 a:visited,
 a:active {
@@ -42,7 +41,7 @@ img {
   }
 }
 
-.leftcol{
+.leftcol {
   width: 50px;
 }
 
@@ -83,27 +82,24 @@ img {
   caret-color: $lila;
   border-bottom: 2px solid $lila;
   background-color: inherit;
-  grid-area: 1 / 1 / 2 / 2;  
+  grid-area: 1 / 1 / 2 / 2;
 }
 
-
-
-
 .post {
-    float: right;
-    width: max-content;
+  float: right;
+  width: max-content;
+  border-radius: 50px;
+  text-align: center;
+  
+  input {
+    padding: 5px 30px 5px 30px;
+    border: none;
+    color: whitesmoke;
     border-radius: 50px;
-    text-align: center;
-    a {
-      padding: 5px 30px 5px 30px;
-      color: whitesmoke;
-      border-radius: 50px;
-      background-color: $lila;
-      text-shadow: 2px 2px 4px black;
-    }
-    a:hover {
-      background-color: #5d34ff;
-    }
+    background-color: $lila;
+    text-shadow: 2px 2px 4px black;
   }
-
-
+  input:hover {
+    background-color: #5d34ff;
+  }
+}
