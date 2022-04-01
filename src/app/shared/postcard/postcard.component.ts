@@ -26,6 +26,7 @@ export class PostcardComponent implements OnInit {
   post(){
     if(this.postForm.valid){
       console.log(this.postForm.value)
+      this.postForm.setValue({'text': ''})
     }else{
       console.log("fail")
     }

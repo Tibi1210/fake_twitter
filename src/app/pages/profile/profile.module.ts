@@ -10,6 +10,7 @@ import { TweetcardModule } from 'src/app/shared/tweetcard/tweetcard.module';
 import { TopsearchModule } from 'src/app/shared/topsearch/topsearch.module';
 import { RightboxModule } from 'src/app/shared/rightbox/rightbox.module';
 import { BottommenuModule } from 'src/app/shared/bottommenu/bottommenu.module';
+import { PostcardModule } from 'src/app/shared/postcard/postcard.module';
 
 
 @NgModule({
@@ -25,8 +26,8 @@ import { BottommenuModule } from 'src/app/shared/bottommenu/bottommenu.module';
     TweetcardModule,
     TopsearchModule,
     RightboxModule,
-    BottommenuModule
-
+    BottommenuModule,
+    PostcardModule
   ]
 })
 export class ProfileModule { }
