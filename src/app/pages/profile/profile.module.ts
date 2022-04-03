@@ -11,6 +11,7 @@ import { TopsearchModule } from 'src/app/shared/topsearch/topsearch.module';
 import { RightboxModule } from 'src/app/shared/rightbox/rightbox.module';
 import { BottommenuModule } from 'src/app/shared/bottommenu/bottommenu.module';
 import { PostcardModule } from 'src/app/shared/postcard/postcard.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { PostcardModule } from 'src/app/shared/postcard/postcard.module';
     TopsearchModule,
     RightboxModule,
     BottommenuModule,
-    PostcardModule
+    PostcardModule,
+    FlexLayoutModule
   ]
 })
 export class ProfileModule { }

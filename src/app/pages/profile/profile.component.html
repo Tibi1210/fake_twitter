@@ -1,31 +1,39 @@
-<div class="container-fluid">
-    <div class="row">
-      <div class="d-none d-md-block col-md-2 col-lg-3 ">
-        <app-leftmenu></app-leftmenu>
-      </div>
-      <div class=" col-sm-12 col-md-10 col-lg-6">
-        <app-toptitle></app-toptitle>
-        <app-profilecard></app-profilecard>
-        <app-postcard></app-postcard>
-        <app-tweetcard></app-tweetcard>
-        <app-tweetcard></app-tweetcard>
-        <app-tweetcard></app-tweetcard>
-        <app-tweetcard></app-tweetcard>
-        <app-tweetcard></app-tweetcard>
-        <app-tweetcard></app-tweetcard>
-        <app-tweetcard></app-tweetcard>
-        <app-tweetcard></app-tweetcard>
-        <app-tweetcard></app-tweetcard>
-        <app-tweetcard></app-tweetcard>
-        <app-tweetcard></app-tweetcard>
-      </div>
-      <div class="d-none d-lg-block col-lg-3">
-        <app-topsearch></app-topsearch>
-        <app-rightbox></app-rightbox>
-        <app-rightbox></app-rightbox>
-      </div>
-    </div>
-  </div>
-  <app-bottommenu></app-bottommenu>
+<div
+  fxLayout="column"
+  fxHide.sm
+  fxHide.xs
+  fxFlex.gt-sm="30%"
+  fxFlex.gt-md="30%"
+  class="sticky"
+>
+  <app-leftmenu></app-leftmenu>
+</div>
+
+<div fxLayout="column" fxFlex.gt-sm="70%" fxFlex.gt-md="40%">
   
-  
+  <app-profilecard></app-profilecard>
+
+  <app-postcard></app-postcard>
+
+  <app-tweetcard></app-tweetcard>
+  <app-tweetcard></app-tweetcard>
+  <app-tweetcard></app-tweetcard>
+  <app-tweetcard></app-tweetcard>
+  <app-tweetcard></app-tweetcard>
+  <app-tweetcard></app-tweetcard>
+  <app-tweetcard></app-tweetcard>
+  <app-tweetcard></app-tweetcard>
+  <app-tweetcard></app-tweetcard>
+  <app-tweetcard></app-tweetcard>
+</div>
+
+<div
+  fxLayout="column"
+  fxHide.sm
+  fxHide.xs
+  fxHide.md
+  fxFlex.gt-md="30%"
+  class="sticky"
+>
+  <app-rightbox></app-rightbox>
+</div>

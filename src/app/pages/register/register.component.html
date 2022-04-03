@@ -1,77 +1,51 @@
-<div class="container-fluid">
-  <div class="row rowmargin">
-    <div class="col-sm-1 col-md-3 col-lg-4"></div>
-    <div class="col-sm-10 col-md-6 col-lg-4">
-      <form class="register" [formGroup]="registerForm" (ngSubmit)="register()">
-        <div class="image"><img src="../../../assets/image/logo.png" /></div>
-        <h3>Register</h3>
+<div fxLayout="row" fxFlex fxLayoutAlign="center center">
+<form class="register" [formGroup]="registerForm" (ngSubmit)="register()">
+  <div class="image"><img src="../../../assets/image/logo.png" /></div>
+  <h3>Register</h3>
 
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-              <label for="formGroupExampleInput">Username:</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Username"
-                formControlName="username"
-              />
-            </div>
-          </div>
-          <div class="col">
-            <div class="form-group">
-              <label for="formGroupExampleInput">User @:</label>
-              <input type="text" class="form-control" placeholder="@User" formControlName="userat"/>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-                <label for="formGroupExampleInput">E-mail:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="E-mail"
-                  formControlName="email"
-                />
-              </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-                <label for="formGroupExampleInput">Password:</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  placeholder="Password"
-                  formControlName="passwd"
-                />
-              </div>
-          </div>
-          <div class="col">
-            <div class="form-group">
-                <label for="formGroupExampleInput">Comfirm Password:</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  placeholder="Password Again"
-                  formControlName="passwd_comfirm"
-                />
-              </div>
-          </div>
-        </div>
+  <label>Username:</label><br>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Username"
+    formControlName="username"
+  /><br>
 
-        <input type="submit" class="btnSubmit" value="Register" />
-      
-        <div class="form-group floatright">
-          <label for="formGroupExampleInput">Already have an account?</label>
-          <a [routerLink]="'/login'" class="btnForgetPwd">Log in</a>
-        </div>
+  <label>User @:</label><br>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="@User"
+    formControlName="userat"
+  /><br>
 
-      </form>
-    </div>
-    <div class="col-sm-1 col-md-3 col-lg-4"></div>
-  </div>
+  <label>E-mail:</label><br>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="E-mail"
+    formControlName="email"
+  /><br>
+
+  <label>Password:</label><br>
+  <input
+    type="password"
+    class="form-control"
+    placeholder="Password"
+    formControlName="passwd"
+  /><br>
+
+  <label>Comfirm Password:</label><br>
+  <input
+    type="password"
+    class="form-control"
+    placeholder="Password Again"
+    formControlName="passwd_comfirm"
+  />
+
+  <input type="submit" class="btnSubmit" value="Register" />
+
+    <label>Already have an account?</label>
+    <a [routerLink]="'/login'" class="btnForgetPwd">Log in</a>
+</form>
 </div>

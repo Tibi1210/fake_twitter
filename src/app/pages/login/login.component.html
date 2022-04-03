@@ -1,52 +1,30 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-1 col-md-3 col-lg-4"></div>
-    <div class="col-sm-10 col-md-6 col-lg-4">
-      <form class="login" [formGroup]="loginForm" (ngSubmit)="login()">
-        <div class="image"><img src="../../../assets/image/logo.png" /></div>
-        <h3>Login</h3>
-        <div class="form-group">
-          <label for="formGroupExampleInput">E-mail:</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Email"
-            value=""
-            formControlName="email"
-          />
-        </div>
-        <div class="form-group">
-          <label for="formGroupExampleInput">Password:</label>
-          <input
-            type="password"
-            class="form-control"
-            placeholder="Password"
-            value=""
-            formControlName="passwd"
-          />
-        </div>
-        <div class="form-group">
-          <input type="submit" class="btnSubmit" value="Login" />
-        </div>
+<div fxLayout="row" fxFlex fxLayoutAlign="center center">
+  <form class="login" [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="image"><img src="../../../assets/image/logo.png" /></div>
+    <h3>Login</h3>
 
+    <label>E-mail:</label><br />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Email"
+      value=""
+      formControlName="email"
+    /><br />
+    <label>Password:</label><br />
+    <input
+      type="password"
+      class="form-control"
+      placeholder="Password"
+      value=""
+      formControlName="passwd"
+    />
 
-        <div class="row links">
-          <div class="col-sm-12 col-md order-sm-2">
-            <div class="form-group">
-              <label for="formGroupExampleInput">Don't have an account?</label>
-              <a [routerLink]="'/register'" class="btnForgetPwd registerlink">Register</a>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md order-sm-1">
-            <div class="form-group floatright">
-              <a href="forget" class="btnForgetPwd">Forget Password?</a>
-            </div>
-          </div>
-        </div>
+    <input type="submit" class="btnSubmit" value="Login" />
 
-
-      </form>
-    </div>
-    <div class="col-sm-1 col-md-3 col-lg-4"></div>
-  </div>
+    <label for="formGroupExampleInput">Don't have an account?</label>
+    <a [routerLink]="'/register'" class="btnForgetPwd registerlink">Register</a>
+    <br />
+    <a href="forget" class="btnForgetPwd">Forget Password?</a>
+  </form>
 </div>

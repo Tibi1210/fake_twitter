@@ -12,11 +12,10 @@ $lila: #7856ff;
   border: none;
   background-color: $szurke;
   color: whitesmoke;
+  width: 100%;
+  font-size: 12pt;
 }
 
-.row {
-  margin-top: 10%;
-}
 .image {
   margin: 0 auto 0 auto;
   width: max-content;
@@ -70,14 +69,10 @@ h3 {
   text-decoration: underline;
 }
 
-.floatright {
-  width: 100%;
-
-}
 .registerlink {
   margin-left: 10px;
 }
-.links{
+.links {
   text-align: center;
   margin-top: -0px;
 }

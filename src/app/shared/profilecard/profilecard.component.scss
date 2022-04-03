@@ -19,10 +19,10 @@ a:hover {
   background-color: black;
   color: white;
   margin-bottom: 5px;
-  border-color: $vilagosszurke;
-  border-width: 2px;
+  border: 2px solid $vilagosszurke;
   border-radius: 0px 0px 20px 20px;
   height: fit-content;
+
 }
 
 #profilepicture {
@@ -39,20 +39,16 @@ a:hover {
 .content {
   margin: 10px;
   margin-top: 50px;
+  padding: 10px;
 }
 
 .profileimage {
   height: 100px;
   width: 100px;
   border-radius: 50px;
-  margin-bottom: 10px;
-  position: absolute;
-  z-index: 10;
+  position:absolute;
   top: 200px;
-  left: 10px;
-  a {
-    background-color: inherit;
-  }
+  padding-left: 10px;
 }
 .profileimage:hover {
   box-shadow: 3px 4px 3px 1px black;

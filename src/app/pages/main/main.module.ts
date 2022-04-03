@@ -10,6 +10,7 @@ import { ToptitleModule } from 'src/app/shared/toptitle/toptitle.module';
 import { TopsearchModule } from 'src/app/shared/topsearch/topsearch.module';
 import { RightboxModule } from 'src/app/shared/rightbox/rightbox.module';
 import { BottommenuModule } from 'src/app/shared/bottommenu/bottommenu.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { BottommenuModule } from 'src/app/shared/bottommenu/bottommenu.module';
     ToptitleModule,
     TopsearchModule,
     RightboxModule,
-    BottommenuModule
+    BottommenuModule,
+    FlexLayoutModule
   ]
 })
 export class MainModule { }

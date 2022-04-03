@@ -19,10 +19,10 @@ a:hover {
   background-color: black;
   color: white;
   margin-bottom: 5px;
-  border-color: $vilagosszurke;
-  border-width: 2px;
+  border: 2px solid $vilagosszurke;
   border-radius: 20px;
   padding: 10px;
+  height: fit-content;
 }
 
 img {
