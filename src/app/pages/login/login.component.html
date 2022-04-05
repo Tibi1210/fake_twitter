@@ -3,28 +3,45 @@
     <div class="image"><img src="../../../assets/image/logo.png" /></div>
     <h3>Login</h3>
 
-    <label>E-mail:</label><br />
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Email"
-      value=""
-      formControlName="email"
-    /><br />
-    <label>Password:</label><br />
-    <input
-      type="password"
-      class="form-control"
-      placeholder="Password"
-      value=""
-      formControlName="passwd"
-    />
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your email</mat-label>
+      <input
+        matInput
+        placeholder="valami@valami.com"
+        required
+        formControlName="email"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input
+        matInput
+        formControlName="passwd"
+        [type]="hide ? 'password' : 'text'"
+        #passwd
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+      <mat-hint>{{ passwd.value?.length || 0 }}/10</mat-hint>
+    </mat-form-field>
 
     <input type="submit" class="btnSubmit" value="Login" />
 
-    <label for="formGroupExampleInput">Don't have an account?</label>
-    <a [routerLink]="'/register'" class="btnForgetPwd registerlink">Register</a>
+    <div>
+      Don't have an account?
+      <a [routerLink]="'/register'" class="btnForgetPwd registerlink"
+        >Register</a
+      >
+    </div>
     <br />
-    <a href="forget" class="btnForgetPwd">Forget Password?</a>
+    <div><a href="forget" class="btnForgetPwd">Forget Password?</a></div>
   </form>
 </div>

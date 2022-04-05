@@ -2,20 +2,21 @@ $szurke: #202327;
 $lila: #7856ff;
 
 .login {
-  padding: 20px;
+  padding: 30px;
   border-style: solid;
   border-color: $lila;
   border-radius: 25px;
 }
 
-.form-control {
-  border: none;
-  background-color: $szurke;
-  color: whitesmoke;
+mat-form-field{
+  font-size: 14pt;
   width: 100%;
-  font-size: 16pt;
-  padding: 3px;
+  margin-bottom: 10px;
 }
+button{
+  background-color: whitesmoke;
+}
+
 
 .image {
   margin: 0 auto 0 auto;
@@ -26,13 +27,6 @@ $lila: #7856ff;
 img {
   height: 40px;
   width: 50px;
-}
-
-input {
-  margin-bottom: 10px;
-}
-label {
-  margin-bottom: 5px;
 }
 
 h3 {
@@ -51,6 +45,7 @@ h3 {
   padding: 2%;
   font-weight: bolder;
   margin-top: 10px;
+  margin-bottom: 20px;
   font-size: 16pt;
 }
 

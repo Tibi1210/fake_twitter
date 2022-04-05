@@ -15,13 +15,16 @@ export class LoginComponent implements OnInit {
     passwd: '',
   })
 
-  constructor(private fb: FormBuilder,private router: Router) { }
+  hide = true;
+  constructor(private fb: FormBuilder,private router: Router) {
+
+  }
 
   ngOnInit(): void {
   }
   createForm(model: UserLogin){
     let fg =this.fb.group(model);
-    fg.get('email')?.addValidators([Validators.required, Validators.minLength(5)]);
+    fg.get('email')?.addValidators([Validators.required, Validators.minLength(5),Validators.email]);
     fg.get('passwd')?.addValidators([Validators.required, Validators.minLength(10)]);
     return fg;
   }
