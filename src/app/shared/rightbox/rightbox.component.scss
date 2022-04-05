@@ -6,21 +6,22 @@ $vilagosszurke: #1D1F23;
     font-weight: bold;
     border-radius: 25px;
     padding: 10px 0px 20px 0px;
-    margin-bottom: 10px;
+    margin: 0px 50px 0px 50px;
 }
 .title{
     font-size: 18pt;
-    padding-left: 15px;
+    padding: 15px 15px 15px 15px;
+
 }
 
 .element{
         background-color: $szurke;
         color: white;
-        width: 100%;
         padding: 20px 10px 20px 10px;
         text-decoration: none;
         font-size: 14pt;
         padding-left: 20px;
+        display: block;
 }
 .element:hover{
     background-color: $vilagosszurke;
