@@ -6,3 +6,10 @@
     height: auto;
     height: fit-content;
 }
+
+.sticky-top{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}

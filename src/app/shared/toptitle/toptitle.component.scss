@@ -1,15 +1,22 @@
-a:visited,a:link,a:active,a:hover{
-    background-color: transparent;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size:18pt;
+a:visited,
+a:link,
+a:active,
+a:hover {
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18pt;
+  
 }
 
-.navbar{
-    background-color: rgb(0, 0, 0,0.8);
-    padding: 10px;
-    font-size: larger;
-    height: 65px;
-    backdrop-filter: blur(5px);
+.navbar {
+  background-color: rgb(0, 0, 0, 0.8);
+  font-size: larger;
+  backdrop-filter: blur(5px);
+  display: block;
+  height: 50px;
+  display: block;
+  padding-top: 18px;
+  padding-left: 20px;
 }
