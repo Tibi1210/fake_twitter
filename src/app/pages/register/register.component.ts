@@ -10,7 +10,7 @@ import { UserRegister } from 'src/app/models/UserRegister';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-
+  hide = true;
   registerForm = this.createForm({
     username: '',
     userat: '',

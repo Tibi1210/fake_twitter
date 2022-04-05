@@ -1,51 +1,71 @@
 <div fxLayout="row" fxFlex fxLayoutAlign="center center">
-<form class="register" [formGroup]="registerForm" (ngSubmit)="register()">
-  <div class="image"><img src="../../../assets/image/logo.png" /></div>
-  <h3>Register</h3>
+  <form class="register" [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="image"><img src="../../../assets/image/logo.png" /></div>
+    <h3>Register</h3>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your Username</mat-label>
+      <input
+        matInput
+        placeholder="Username"
+        required
+        formControlName="username"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your @UserTag</mat-label>
+      <input
+        matInput
+        placeholder="@somebody"
+        required
+        formControlName="userat"
+      /> </mat-form-field
+    ><br />
 
-  <label>Username:</label><br>
-  <input
-    type="text"
-    class="form-control"
-    placeholder="Username"
-    formControlName="username"
-  /><br>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your email</mat-label>
+      <input
+        matInput
+        placeholder="valami@valami.com"
+        required
+        formControlName="email"
+      /> </mat-form-field
+    ><br />
 
-  <label>User @:</label><br>
-  <input
-    type="text"
-    class="form-control"
-    placeholder="@User"
-    formControlName="userat"
-  /><br>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input
+        matInput
+        formControlName="passwd"
+        [type]="hide ? 'password' : 'text'"
+        #passwd
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+      <mat-hint>{{ passwd.value?.length || 0 }}/10</mat-hint> </mat-form-field
+    ><br />
 
-  <label>E-mail:</label><br>
-  <input
-    type="text"
-    class="form-control"
-    placeholder="E-mail"
-    formControlName="email"
-  /><br>
+    <mat-form-field appearance="fill">
+      <mat-label>Comfirm your password</mat-label>
+      <input
+        matInput
+        formControlName="passwd_comfirm"
+        [type]="'password'"
+        #passwd_c
+      />
+      <mat-hint>{{ passwd_c.value?.length || 0 }}/10</mat-hint> </mat-form-field
+    ><br />
 
-  <label>Password:</label><br>
-  <input
-    type="password"
-    class="form-control"
-    placeholder="Password"
-    formControlName="passwd"
-  /><br>
-
-  <label>Comfirm Password:</label><br>
-  <input
-    type="password"
-    class="form-control"
-    placeholder="Password Again"
-    formControlName="passwd_comfirm"
-  />
-
-  <input type="submit" class="btnSubmit" value="Register" />
+    <input type="submit" class="btnSubmit" value="Register" />
 
     <label>Already have an account?</label>
     <a [routerLink]="'/login'" class="btnForgetPwd">Log in</a>
-</form>
+  </form>
 </div>

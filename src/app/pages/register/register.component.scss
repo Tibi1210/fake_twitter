@@ -8,14 +8,19 @@ $lila: #7856ff;
   border-radius: 25px;
 }
 
-.form-control {
-  border: none;
-  background-color: $szurke;
-  color: whitesmoke;
+mat-form-field{
+  font-size: 12pt;
+  margin-bottom: 10px;
   width: 100%;
-  font-size: 16pt;
-  padding: 3px;
 }
+mat-label{
+  color: whitesmoke;
+}
+button{
+  background-color: whitesmoke;
+}
+
+
 
 .rowmargin {
   margin-top: 10%;
@@ -29,13 +34,6 @@ $lila: #7856ff;
 img {
   height: 40px;
   width: 50px;
-}
-
-input {
-  margin-bottom: 10px;
-}
-label{
-    margin-bottom: 5px;
 }
 
 h3 {
@@ -54,6 +52,7 @@ h3 {
   padding: 2%;
   font-weight: bolder;
   margin-top: 10px;
+  margin-bottom: 20px;
   font-size: 16pt;
 }
 
