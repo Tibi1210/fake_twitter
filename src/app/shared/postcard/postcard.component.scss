@@ -3,6 +3,11 @@ $vilagosszurke: #333639;
 $btn_szurke: #6e6e6e;
 $lila: #7856ff;
 
+table{
+  width: 100%;
+  margin-top: 20px;
+}
+
 a:link,
 a:visited,
 a:active {
@@ -20,8 +25,7 @@ a:hover {
   background-color: black;
   color: white;
   margin-bottom: 5px;
-  border-color: $vilagosszurke;
-  border-width: 2px;
+  border: 2px solid $vilagosszurke;
   border-radius: 20px;
   padding: 10px;
 }
@@ -64,7 +68,9 @@ img {
   margin-bottom: 10px;
   padding: 10px;
   padding-top: 0;
+  width: 90%;
 }
+
 .grow-wrap::after {
   content: attr(data-replicated-value) " ";
   white-space: pre-wrap;
@@ -81,7 +87,10 @@ img {
   color: whitesmoke;
   caret-color: $lila;
   border-bottom: 2px solid $lila;
+  font-size: 16pt;
   background-color: inherit;
+  line-height: 16pt;
+  margin-top: 10px;
   grid-area: 1 / 1 / 2 / 2;
 }
 
@@ -103,3 +112,4 @@ img {
     background-color: #5d34ff;
   }
 }
+

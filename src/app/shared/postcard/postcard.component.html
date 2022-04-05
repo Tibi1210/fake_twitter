@@ -1,6 +1,9 @@
 <form class="card" [formGroup]="postForm" (ngSubmit)="post()">
   <table>
     <tr>
+      <td colspan="3"></td>
+    </tr>
+    <tr>
       <td class="leftcol">
         <div class="image">
           <a [routerLink]="'/profile'"
@@ -8,11 +11,7 @@
           /></a>
         </div>
       </td>
-      <td colspan="2"><a [routerLink]="'/profile'" class="name">Tibi</a></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td colspan="2">
+      <td colspan="2" class="asd">
         <div class="grow-wrap">
           <textarea
             maxlength="250"
@@ -28,7 +27,7 @@
       <td></td>
       <td></td>
       <td>
-        <div class="post"><input type="submit" value="Post" ></div>
+        <div class="post"><input type="submit" value="Post" /></div>
       </td>
     </tr>
   </table>
