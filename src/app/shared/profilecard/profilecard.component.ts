@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { stringify } from 'querystring';
 import { AuthService } from 'src/app/services/auth.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-profilecard',
@@ -8,27 +8,27 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./profilecard.component.scss'],
 })
 export class ProfilecardComponent implements OnInit {
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private userService: UserService
+  ) {}
 
   ngOnInit(): void {
-    const user = JSON.parse(localStorage.getItem('user') as string);
+    const user = JSON.parse(localStorage.getItem('userData') as string);
 
     let uname: any = document.getElementById('nev');
     let tag: any = document.getElementById('tag');
     let bio: any = document.getElementById('bio');
-    let pfp: any = document.getElementById('profilepicture');
 
     if (
       user != null &&
       uname != null &&
       tag != null &&
-      bio != null &&
-      pfp != null
+      bio != null
     ) {
-      uname.innerHTML = user.displayName;
-      tag.innerHTML = user.email;
-      bio.innerHTML = user.photoURL;
-      pfp.src = user.photoURL;
+      uname.innerHTML = user.username;
+      tag.innerHTML = user.userat;
+      bio.innerHTML = user.bio;
     }
   }
 }

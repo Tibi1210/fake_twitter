@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/User';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserRegister } from 'src/app/models/UserRegister';
 import { AuthService } from 'src/app/services/auth.service';
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -20,7 +22,7 @@ export class RegisterComponent implements OnInit {
     passwd_comfirm: ''
   })
 
-  constructor(private fb: FormBuilder, private router: Router, private authService: AuthService) {
+  constructor(private fb: FormBuilder, private router: Router, private authService: AuthService, private userService:UserService) {
   }
 
   ngOnInit(): void {}
@@ -42,12 +44,20 @@ export class RegisterComponent implements OnInit {
         .signUp(this.registerForm.get('email')?.value, this.registerForm.get('passwd')?.value)
         .then((cred) => {
           console.log(cred);
-          if(cred.user){
-          cred.user.updateProfile({
-            displayName: this.registerForm.get('username')?.value,
-            photoURL: "../../../assets/image/kep.jpg"
-          });
-        }
+
+          const user: User={
+            id: cred.user?.uid as string,
+            username: this.registerForm.get('username')?.value,
+            userat: "@"+this.registerForm.get('userat')?.value,
+            email: this.registerForm.get('email')?.value,
+            bio: '',
+          }
+            this.userService.create(user).then(_=>{
+              console.log("user added");
+            }).catch((error)=>{
+              console.error(error);
+            });
+
           this.router.navigateByUrl('/login');
         })
         .catch((error) => {

@@ -6,8 +6,10 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from 'src/app/models/User';
 import { UserLogin } from 'src/app/models/UserLogin';
 import { AuthService } from 'src/app/services/auth.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -26,7 +28,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private userService: UserService
   ) {}
 
   ngOnInit(): void {}
@@ -51,22 +54,30 @@ export class LoginComponent implements OnInit {
           this.loginForm.get('passwd')?.value
         )
         .then((cred) => {
-          console.log(cred);
-          this.authService.isUserLoggedIn().subscribe(
-            (user) => {
-              this.loggedInUser = user;
-              localStorage.setItem('user', JSON.stringify(this.loggedInUser));
-            },
-            (error) => {
-              console.error(error);
-              localStorage.setItem('user', JSON.parse('null'));
-            }
-          );
           this.router.navigateByUrl('/home');
         })
         .catch((error) => {
           console.log(error);
         });
+
+      this.authService.isUserLoggedIn().subscribe(
+        (user) => {
+          this.loggedInUser = user;
+          localStorage.setItem('user', JSON.stringify(this.loggedInUser));
+        },
+        (error) => {
+          console.error(error);
+          localStorage.setItem('user', JSON.parse('null'));
+        }
+      );
+
+      this.userService.getAll().subscribe((data: Array<User>) => {
+        data.forEach((element) => {
+          if (element.id == this.loggedInUser?.uid) {
+            localStorage.setItem('userData', JSON.stringify(element));
+          }
+        });
+      });
     } else {
       console.log('fail');
     }

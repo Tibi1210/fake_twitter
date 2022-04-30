@@ -16,5 +16,6 @@ export class LeftmenuComponent implements OnInit {
   logout(){
     this.authService.logout();
     localStorage.setItem('user', JSON.parse('null'));
+    localStorage.setItem('userData', JSON.parse('null'));
   }
 }
