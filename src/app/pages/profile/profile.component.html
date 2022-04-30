@@ -15,16 +15,39 @@
 
   <app-postcard></app-postcard>
 
-  <app-tweetcard></app-tweetcard>
-  <app-tweetcard></app-tweetcard>
-  <app-tweetcard></app-tweetcard>
-  <app-tweetcard></app-tweetcard>
-  <app-tweetcard></app-tweetcard>
-  <app-tweetcard></app-tweetcard>
-  <app-tweetcard></app-tweetcard>
-  <app-tweetcard></app-tweetcard>
-  <app-tweetcard></app-tweetcard>
-  <app-tweetcard></app-tweetcard>
+  
+  <div class="card" *ngFor="let n of asd">
+    <table>
+      <tr>
+        <td class="leftcol">
+          <div class="image">
+            <a [routerLink]="'/profile'"
+              ><img src="../../../assets/image/pfp.png"
+            /></a>
+          </div>
+        </td>
+        <td colspan="2">
+          <a [routerLink]="'/profile'" class="name" id="name">{{n.username}}</a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td colspan="2">
+          <div class="text" id="text">{{n.text}}</div>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <div class="like"><a>Like</a></div>
+        </td>
+        <td>
+          <div class="comment"><a>Comment</a></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
 </div>
 
 <div

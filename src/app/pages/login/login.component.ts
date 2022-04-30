@@ -64,20 +64,19 @@ export class LoginComponent implements OnInit {
         (user) => {
           this.loggedInUser = user;
           localStorage.setItem('user', JSON.stringify(this.loggedInUser));
+          if (this.loggedInUser) {
+            this.userService
+              .getOne(this.loggedInUser?.uid as string)
+              .subscribe((data: Array<User>) => {
+                localStorage.setItem('userData', JSON.stringify(data[0]));
+              });
+          }
         },
         (error) => {
           console.error(error);
           localStorage.setItem('user', JSON.parse('null'));
         }
       );
-
-      this.userService.getAll().subscribe((data: Array<User>) => {
-        data.forEach((element) => {
-          if (element.id == this.loggedInUser?.uid) {
-            localStorage.setItem('userData', JSON.stringify(element));
-          }
-        });
-      });
     } else {
       console.log('fail');
     }

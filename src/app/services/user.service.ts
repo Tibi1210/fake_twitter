@@ -25,6 +25,11 @@ export class UserService {
       .valueChanges();
   }
 
+  getOne(username:string) {
+    return this.afs
+      .collection<User>(this.collectionName,ref=>ref.where('id', '==', username).limit(1))
+      .valueChanges();
+  }
   update() {}
   delete() {}
 }

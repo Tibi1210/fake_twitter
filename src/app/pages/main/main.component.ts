@@ -1,16 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { parse } from 'path';
+import { Post } from 'src/app/models/Post';
+import { PostDB } from 'src/app/models/PostDB';
 import { AuthService } from 'src/app/services/auth.service';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
+  constructor(
+    private authService: AuthService,
+    private postService: PostService
+  ) {}
 
-  constructor(private authService: AuthService) { }
-
+  asd:PostDB[]=[];
+  i=0;
   ngOnInit(): void {
+    this.postService.getAll().subscribe((data: Array<PostDB>) => {
+      if (data) {
+        data.forEach(element => {
+          this.asd[this.i]=element;
+           this.i++;
+        });
+        
+      }
+    });
   }
 
 }

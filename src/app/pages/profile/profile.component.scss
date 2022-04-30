@@ -13,3 +13,106 @@
     top: 0px;
     z-index: 2;
 }
+
+$szurke: #080808;
+$vilagosszurke: #333639;
+$btn_szurke: #6e6e6e;
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  background-color: $szurke;
+  text-decoration: none;
+  color: white;
+}
+
+.card {
+  background-color: black;
+  color: white;
+  margin-bottom: 5px;
+  border: 2px solid $vilagosszurke;
+  border-radius: 20px;
+  padding: 10px;
+  height: fit-content;
+}
+
+table{
+  width: 100%;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+}
+
+.image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  a {
+    background-color: inherit;
+  }
+}
+
+.leftcol{
+  width: 50px;
+}
+
+.image:hover {
+  box-shadow: 3px 4px 3px 1px black;
+  -webkit-filter: brightness(90%);
+}
+
+.name {
+  font-weight: bold;
+  margin-left: 10px;
+}
+.name:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.text {
+  text-align: justify;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.like {
+    margin: 0 auto 0 auto;
+    width: max-content;
+    border-radius: 50px;
+    text-align: center;
+    a {
+      padding: 3px 20px 3px 20px;
+      color: $btn_szurke;
+    }
+    a:hover {
+      color: red;
+      border-radius: 50px;
+      background-color: rgba(255, 0, 0,0.3);
+      text-shadow: 2px 2px 4px black;
+    }
+  }
+
+.comment {
+  margin: 0 auto 0 auto;
+  width: max-content;
+  border-radius: 50px;
+  text-align: center;
+  a {
+    padding: 3px 20px 3px 20px;
+    color: $btn_szurke;
+  }
+  a:hover {
+    color: #1d9bf0;
+    border-radius: 50px;
+    background-color: rgba(29, 155, 240,0.3);
+    text-shadow: 2px 2px 4px black;
+  }
+}

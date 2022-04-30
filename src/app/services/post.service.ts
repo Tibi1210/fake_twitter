@@ -17,7 +17,7 @@ export class PostService {
       .collection<PostDB>(this.collectionName).add(post);
   }
 
-  getUser() {
+  getAll() {
     return this.afs
       .collection<PostDB>(this.collectionName)
       .valueChanges();
