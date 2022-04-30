@@ -20,6 +20,8 @@ export class LoginComponent implements OnInit {
     passwd: '',
   });
 
+  loggedInUser?: firebase.default.User | null;
+
   hide = true;
   constructor(
     private fb: FormBuilder,
@@ -44,9 +46,22 @@ export class LoginComponent implements OnInit {
   login() {
     if (this.loginForm.valid) {
       this.authService
-        .login(this.loginForm.get('email')?.value, this.loginForm.get('passwd')?.value)
+        .login(
+          this.loginForm.get('email')?.value,
+          this.loginForm.get('passwd')?.value
+        )
         .then((cred) => {
           console.log(cred);
+          this.authService.isUserLoggedIn().subscribe(
+            (user) => {
+              this.loggedInUser = user;
+              localStorage.setItem('user', JSON.stringify(this.loggedInUser));
+            },
+            (error) => {
+              console.error(error);
+              localStorage.setItem('user', JSON.parse('null'));
+            }
+          );
           this.router.navigateByUrl('/home');
         })
         .catch((error) => {

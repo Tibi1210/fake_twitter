@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuardGuard } from './services/auth-guard.guard';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
       import('./pages/main/main.module').then(
         (m) => m.MainModule
       ),
+      canActivate: [AuthGuardGuard],
   },
   {
     path: 'profile',
@@ -36,16 +38,18 @@ const routes: Routes = [
       import('./pages/profile/profile.module').then(
         (m) => m.ProfileModule
       ),
+      canActivate: [AuthGuardGuard],
   }, 
   {
     path: '',
-    redirectTo: '/home',
-    pathMatch:'full'
+    redirectTo: '/login',
+    pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: '/not-found'
+    redirectTo: 'not-found'
   },
+  
 ];
 
 @NgModule({
