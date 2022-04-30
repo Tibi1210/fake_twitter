@@ -18,6 +18,8 @@ export class MainComponent implements OnInit {
 
   asd:PostDB[]=[];
   i=0;
+  condition = false;
+
   ngOnInit(): void {
     this.postService.getAll().subscribe((data: Array<PostDB>) => {
       if (data) {

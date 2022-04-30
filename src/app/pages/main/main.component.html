@@ -38,7 +38,11 @@
       <tr>
         <td></td>
         <td>
-          <div class="like"><a>Like</a></div>
+          <div class="like"><a
+            (click)="condition = !condition"
+            [ngClass]="{ like: condition, liked: !condition }"
+            >{{condition ? 'Like' : 'Liked'}}</a
+          ></div>
         </td>
         <td>
           <div class="comment"><a>Comment</a></div>

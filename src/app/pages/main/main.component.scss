@@ -14,7 +14,6 @@
 }
 
 
-
 $szurke: #080808;
 $vilagosszurke: #333639;
 $btn_szurke: #6e6e6e;
@@ -99,6 +98,27 @@ img {
       background-color: rgba(255, 0, 0,0.3);
       text-shadow: 2px 2px 4px black;
     }
+  }
+
+  .liked {
+    margin: 0 auto 0 auto;
+    width: max-content;
+    border-radius: 50px;
+    text-align: center;
+    background-color: rgba(255, 0, 0,0.3);
+    color: red;
+    
+    a {
+      padding: 3px 20px 3px 20px;
+      color: red;
+    }
+    a:hover {
+      color: $btn_szurke;
+      border-radius: 50px;
+      background-color: none;
+      text-shadow: 2px 2px 4px black;
+    }
+    color: red;
   }
 
 .comment {
