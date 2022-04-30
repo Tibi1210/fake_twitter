@@ -1,6 +1,5 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { parse } from 'path';
-import { Post } from 'src/app/models/Post';
+import { Component, OnInit } from '@angular/core';
+
 import { PostDB } from 'src/app/models/PostDB';
 import { AuthService } from 'src/app/services/auth.service';
 import { PostService } from 'src/app/services/post.service';

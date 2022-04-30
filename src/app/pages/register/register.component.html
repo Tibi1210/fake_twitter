@@ -63,7 +63,7 @@
       <mat-hint>{{ passwd_c.value?.length || 0 }}/10</mat-hint> </mat-form-field
     ><br />
 
-    <input type="submit" class="btnSubmit" value="Register" />
+    <input matTooltip="Register Button" type="submit" class="btnSubmit" value="Register" />
 
     <label>Already have an account?</label>
     <a [routerLink]="'/login'" class="btnForgetPwd">Log in</a>

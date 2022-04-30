@@ -8,6 +8,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MatIconModule } from '@angular/material/icon';
     FlexLayoutModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatTooltipModule
   ]
 })
 export class RegisterModule { }

@@ -1,10 +1,24 @@
 <div class="card">
-
-  <div class="title">Topics for you</div>
-  <a class="element" href="element">F5 ha sok a duplikált tweet!</a><br>
-  <a class="element" href="element">Törlés után töltsd újra az oldalt és eltünik!</a><br>
-  <a class="element" href="element">A profilodon csak saját tweetjeid látod!</a><br>
-  <a class="element" href="element">Cica</a><br>
-  <a class="element" href="element">Lámpa</a><br>
-  <a class="element" href="element">Keksz</a>
+  <mat-accordion>
+    <mat-expansion-panel
+      class="exp"
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title class="exptitle"> Topics for you </mat-panel-title>
+        <mat-panel-description class="exptip">Tips: {{panelOpenState ? 'open' : 'closed'}} </mat-panel-description>
+      </mat-expansion-panel-header>
+      <a class="element" href="element">F5 ha sok a duplikált tweet!</a><br />
+      <a class="element" href="element"
+        >Törlés után töltsd újra az oldalt és eltünik!</a
+      ><br />
+      <a class="element" href="element"
+        >A profilodon csak saját tweetjeid látod!</a
+      ><br />
+      <a class="element" href="element">Cica</a><br />
+      <a class="element" href="element">Lámpa</a><br />
+      <a class="element" href="element">Keksz</a>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RightboxComponent } from './rightbox.component';
+import{MatExpansionModule} from '@angular/material/expansion'
+
 
 
 
@@ -9,7 +11,10 @@ import { RightboxComponent } from './rightbox.component';
     RightboxComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatExpansionModule,
+
+    
   ],
   exports: [
     RightboxComponent

@@ -88,6 +88,7 @@ img {
     width: max-content;
     border-radius: 50px;
     text-align: center;
+    background-color: none;
     a {
       padding: 3px 20px 3px 20px;
       color: $btn_szurke;
@@ -100,26 +101,27 @@ img {
     }
   }
 
-  .liked {
+.liked {
     margin: 0 auto 0 auto;
     width: max-content;
     border-radius: 50px;
     text-align: center;
-    background-color: rgba(255, 0, 0,0.3);
-    color: red;
     
     a {
       padding: 3px 20px 3px 20px;
+      background-color: rgba(255, 0, 0,0.3);
+      border-radius: 50px;
       color: red;
     }
     a:hover {
-      color: $btn_szurke;
+      color: red;
       border-radius: 50px;
-      background-color: none;
+      background-color: rgba(255, 0, 0,0.3);
       text-shadow: 2px 2px 4px black;
     }
-    color: red;
   }
+
+
 
 .comment {
   margin: 0 auto 0 auto;

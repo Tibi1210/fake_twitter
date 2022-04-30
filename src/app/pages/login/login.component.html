@@ -2,7 +2,7 @@
   <form class="login" [formGroup]="loginForm" (ngSubmit)="login()">
     <div class="image"><img src="../../../assets/image/logo.png" /></div>
     <h3>Login</h3>
-
+    <mat-divider style="background-color: aliceblue"></mat-divider>
     <mat-form-field appearance="fill">
       <mat-label>Enter your email</mat-label>
       <input
@@ -34,7 +34,9 @@
       <mat-hint>{{ passwd.value?.length || 0 }}/10</mat-hint>
     </mat-form-field>
 
-    <input type="submit" class="btnSubmit" value="Login" />
+    <mat-divider style="background-color: aliceblue"></mat-divider>
+
+    <input matTooltip="Login button" type="submit" class="btnSubmit" value="Login" />
 
     <div>
       Don't have an account?
