@@ -105,6 +105,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "fake_twitter:build:production",
+            "firebaseProject": "webfejl-fake-twitter",
+            "firebaseHostingSite": "webfejl-fake-twitter"
+          }
         }
       }
     }

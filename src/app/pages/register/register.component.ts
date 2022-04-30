@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserRegister } from 'src/app/models/UserRegister';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class RegisterComponent implements OnInit {
     passwd_comfirm: ''
   })
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(private fb: FormBuilder, private router: Router, private authService: AuthService) {
   }
 
   ngOnInit(): void {}
@@ -37,8 +38,21 @@ export class RegisterComponent implements OnInit {
 
   register() {
     if(this.registerForm.valid){
-      console.log(this.registerForm.value)
-      this.router.navigateByUrl('login');
+      this.authService
+        .signUp(this.registerForm.get('email')?.value, this.registerForm.get('passwd')?.value)
+        .then((cred) => {
+          console.log(cred);
+          if(cred.user){
+          cred.user.updateProfile({
+            displayName: this.registerForm.get('username')?.value,
+            photoURL: "../../../assets/image/kep.jpg"
+          });
+        }
+          this.router.navigateByUrl('/login');
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }else{
       console.log("fail")
     }

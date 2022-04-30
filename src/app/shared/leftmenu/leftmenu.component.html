@@ -2,5 +2,5 @@
     <div class="image"><img src="../../../assets/image/logo.png"/></div>
     <div class="link home"><a [routerLink]="'/home'">Home</a></div>
     <div class="link"><a [routerLink]="'/profile'">Profile</a></div>
-    <div class="link"><a [routerLink]="'/login'">Logout</a></div>
+    <div class="link"><a [routerLink]="'/login'" (click)="logout()">Logout</a></div>
 </div>

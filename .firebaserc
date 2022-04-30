@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "webfejl-fake-twitter": {
+      "hosting": {
+        "fake_twitter": [
+          "webfejl-fake-twitter"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "webfejl-fake-twitter"
+  }
+}
