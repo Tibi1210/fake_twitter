@@ -20,16 +20,20 @@ export class UserService {
   }
 
   getAll() {
-    return this.afs
-      .collection<User>(this.collectionName)
-      .valueChanges();
+    return this.afs.collection<User>(this.collectionName).valueChanges();
   }
 
-  getOne(username:string) {
+  getOne(username: string) {
     return this.afs
-      .collection<User>(this.collectionName,ref=>ref.where('id', '==', username).limit(1))
+      .collection<User>(this.collectionName, (ref) =>
+        ref.where('id', '==', username).limit(1)
+      )
       .valueChanges();
   }
-  update() {}
-  delete() {}
+  update(user: User) {
+    return this.afs
+      .collection<User>(this.collectionName)
+      .doc(user.id)
+      .set(user);
+  }
 }

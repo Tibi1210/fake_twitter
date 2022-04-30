@@ -32,7 +32,7 @@ export class PostcardComponent implements OnInit {
       const post: PostDB = {
         username: this.userData.username,
         text: this.postForm.get('text')?.value,
-        date: Date.now(),
+        id: Date.now().toString(),
       };
 
       this.postService
