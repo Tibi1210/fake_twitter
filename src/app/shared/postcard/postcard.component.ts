@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router} from '@angular/router';
 import { Post } from 'src/app/models/Post';
 import { PostDB } from 'src/app/models/PostDB';
 import { PostService } from 'src/app/services/post.service';
@@ -17,7 +17,7 @@ export class PostcardComponent implements OnInit {
     text: '',
   });
 
-  constructor(private fb: FormBuilder, private postService: PostService) {}
+  constructor(private fb: FormBuilder, private postService: PostService, private router:Router) {}
 
   ngOnInit(): void {}
 

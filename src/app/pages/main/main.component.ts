@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { PostDB } from 'src/app/models/PostDB';
 import { AuthService } from 'src/app/services/auth.service';
@@ -15,18 +15,19 @@ export class MainComponent implements OnInit {
     private postService: PostService
   ) {}
 
-  asd:PostDB[]=[];
-  i=0;
-  condition = false;
+  asd: PostDB[] = [];
+  i = 0;
+  condition = true;
+  postSub:any;
 
   ngOnInit(): void {
-    this.postService.getAll().subscribe((data: Array<PostDB>) => {
+    
+    this.postSub=this.postService.getAll().subscribe((data: Array<PostDB>) => {
       if (data) {
-        data.forEach(element => {
-          this.asd[this.i]=element;
-           this.i++;
+        data.forEach((element) => {
+          this.asd[this.i] = element;
+          this.i++;
         });
-        
       }
     });
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -12,23 +12,24 @@ export class ProfilecardComponent implements OnInit {
     private authService: AuthService,
     private userService: UserService
   ) {}
+  user = JSON.parse(localStorage.getItem('userData') as string);
 
   ngOnInit(): void {
-    const user = JSON.parse(localStorage.getItem('userData') as string);
-
+    
     let uname: any = document.getElementById('nev');
     let tag: any = document.getElementById('tag');
     let bio: any = document.getElementById('bio');
 
     if (
-      user != null &&
+      this.user != null &&
       uname != null &&
       tag != null &&
       bio != null
     ) {
-      uname.innerHTML = user.username;
-      tag.innerHTML = user.userat;
-      bio.innerHTML = user.bio;
+      uname.innerHTML = this.user.username;
+      tag.innerHTML = this.user.userat;
+      bio.innerHTML = this.user.bio;
     }
   }
+
 }

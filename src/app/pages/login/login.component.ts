@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/User';
@@ -28,13 +28,12 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {}
+
+  authSub:any;
+
   createForm(model: UserLogin) {
     let fg = this.fb.group(model);
-    fg.get('email')?.addValidators([
-      Validators.required,
-      Validators.minLength(5),
-      Validators.email,
-    ]);
+    fg.get('email')?.addValidators([Validators.required, Validators.email]);
     fg.get('passwd')?.addValidators([
       Validators.required,
       Validators.minLength(10),
@@ -49,13 +48,15 @@ export class LoginComponent implements OnInit {
           this.loginForm.get('passwd')?.value
         )
         .then((cred) => {
-          this.router.navigateByUrl('/home');
+          if (cred) {
+            this.router.navigateByUrl('/home');
+          }
         })
         .catch((error) => {
           console.log(error);
         });
 
-      this.authService.isUserLoggedIn().subscribe(
+      this.authSub=this.authService.isUserLoggedIn().subscribe(
         (user) => {
           this.loggedInUser = user;
           localStorage.setItem('user', JSON.stringify(this.loggedInUser));
@@ -76,4 +77,5 @@ export class LoginComponent implements OnInit {
       console.log('fail');
     }
   }
+
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -8,14 +9,25 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LeftmenuComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService,private router:Router) { }
 
   ngOnInit(): void {
   }
 
   logout(){
-    this.authService.logout();
-    localStorage.setItem('user', JSON.parse('null'));
-    localStorage.setItem('userData', JSON.parse('null'));
+    this.authService.isUserLoggedIn().subscribe(
+      (user) => {
+        if(user){
+          this.authService.logout();
+          localStorage.setItem('user', JSON.parse('null'));
+          localStorage.setItem('userData', JSON.parse('null'));
+        }
+      },
+      (error) => {
+        console.error(error);
+        localStorage.setItem('user', JSON.parse('null'));
+        localStorage.setItem('userData', JSON.parse('null'));
+      }
+    );    
   }
 }
