@@ -23,6 +23,7 @@ export class UserService {
     return this.afs.collection<User>(this.collectionName).valueChanges();
   }
 
+  //1. Komplex lekérdezés
   getOne(username: string) {
     return this.afs
       .collection<User>(this.collectionName, (ref) =>

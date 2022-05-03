@@ -1,9 +1,13 @@
 <div fxLayout="row" fxFlex fxLayoutAlign="center center">
+  <!-- 1. Angular Form-->
   <form class="login" [formGroup]="loginForm" (ngSubmit)="login()">
     <div class="image"><img src="../../../assets/image/logo.png" /></div>
     <h3>Login</h3>
+    <!-- 1. material divider-->
     <mat-divider style="background-color: aliceblue"></mat-divider>
+    <!-- 2. material formfield-->
     <mat-form-field appearance="fill">
+      <!-- 3. material label-->
       <mat-label>Enter your email</mat-label>
       <input
         matInput
@@ -16,6 +20,7 @@
     <br />
     <mat-form-field appearance="fill">
       <mat-label>Enter your password</mat-label>
+      <!-- 1. attribútum direktíva-->
       <input
         matInput
         formControlName="passwd"
@@ -29,14 +34,22 @@
         [attr.aria-label]="'Hide password'"
         [attr.aria-pressed]="hide"
       >
+        <!-- 4. material icon-->
         <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
       </button>
+      <!-- 5. material hint-->
       <mat-hint>{{ passwd.value?.length || 0 }}/10</mat-hint>
     </mat-form-field>
 
     <mat-divider style="background-color: aliceblue"></mat-divider>
 
-    <input matTooltip="Login button" type="submit" class="btnSubmit" value="Login" />
+    <!-- 6. material tooltip-->
+    <input
+      matTooltip="Login button"
+      type="submit"
+      class="btnSubmit"
+      value="Login"
+    />
 
     <div>
       Don't have an account?

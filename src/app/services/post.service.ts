@@ -26,6 +26,7 @@ export class PostService {
     return this.afs.collection<PostDB>(this.collectionName).valueChanges();
   }
 
+  //2. Komplex lekérdezés
   getSomeones(name: string) {
     return this.afs
       .collection<PostDB>(this.collectionName, (ref) =>
