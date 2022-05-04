@@ -3,7 +3,7 @@
     <img src="../../../assets/image/banner.jpg" id="bannerpicture" />
   </div>
   <div class="profileimage">
-    <a href="../../../assets/image/pfp.png" 
+    <a href="../../../assets/image/pfp.png"
       ><img id="profilepicture" src="../../../assets/image/pfp.png"
     /></a>
   </div>
@@ -12,7 +12,12 @@
     <div class="username" id="nev"></div>
 
     <div class="usertag" id="tag"></div>
-
     <div class="bio" id="bio"></div>
+    <!-- 2. struktúrális direktíva-->
+    <div *ngIf="edit">
+      <input type="text" placeholder="edit bio" id="editbio">
+    </div>
+    
+    <input type="button" class="update" (click)="change()" value="{{edit}}" />
   </div>
 </div>

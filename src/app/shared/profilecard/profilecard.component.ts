@@ -20,7 +20,9 @@ export class ProfilecardComponent implements OnInit {
   ) {}
 
   //1 INPUT
-  @Input() user:any;
+  @Input() user: any;
+
+  edit: boolean = true;
 
   //user = JSON.parse(localStorage.getItem('userData') as string);
 
@@ -35,4 +37,10 @@ export class ProfilecardComponent implements OnInit {
       bio.innerHTML = this.user.bio;
     }
   }
+
+
+  change() {
+    this.edit = !this.edit; 
+  }
+
 }
