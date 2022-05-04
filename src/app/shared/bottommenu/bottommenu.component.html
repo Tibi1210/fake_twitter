@@ -1,5 +1,5 @@
-<div class="navbar d-md-none">
-  <a [routerLink]="'/profile'">Profile</a>
-  <a [routerLink]="'/home'">Home</a>
-  <a [routerLink]="'/login'">Logout</a>
+<div  class="navbar d-md-none">
+  <a fxFlex.lt-md="33.33%" [routerLink]="'/profile'">Profile</a>
+  <a fxFlex.lt-md="33.33%" [routerLink]="'/home'">Home</a>
+  <a fxFlex.lt-md="33.33%" [routerLink]="'/login'" (click)="logout()">Logout</a>
 </div>
