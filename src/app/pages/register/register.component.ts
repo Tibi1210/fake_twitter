@@ -50,13 +50,9 @@ export class RegisterComponent implements OnInit {
             username: this.registerForm.get('username')?.value,
             userat: "@"+this.registerForm.get('userat')?.value,
             email: this.registerForm.get('email')?.value,
-            bio: '',
+            bio: 'bio',
           }
-            this.userService.create(user).then(_=>{
-              console.log("user added");
-            }).catch((error)=>{
-              console.error(error);
-            });
+            this.userService.create(user);
 
           this.router.navigateByUrl('/login');
         })

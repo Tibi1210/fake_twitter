@@ -71,6 +71,7 @@ export class LoginComponent implements OnInit {
         (error) => {
           console.error(error);
           localStorage.setItem('user', JSON.parse('null'));
+          localStorage.setItem('userData', JSON.parse('null'));
         }
       );
     } else {

@@ -1,6 +1,7 @@
 $szurke: #080808;
 $vilagosszurke: #333639;
 $btn_szurke: #6e6e6e;
+$lila: #7856ff;
 
 a:link,
 a:visited,
@@ -54,6 +55,7 @@ a:hover {
   margin: 10px;
   margin-top: 50px;
   padding: 10px;
+  padding-bottom: 30px;
 }
 
 
@@ -79,11 +81,33 @@ a:hover {
   font-size: 14pt;
 }
 
-.update{
-  color: white;
-  background-color: #333639;
-  border: none;
-  display: block;
+.post {
   float: right;
+  width: max-content;
+  border-radius: 50px;
+  text-align: center;
+  display: block;  
+  input {
+    padding: 5px 30px 5px 30px;
+    border: none;
+    color: whitesmoke;
+    border-radius: 50px;
+    background-color: $lila;
+    text-shadow: 2px 2px 4px black;
+  }
+  input:hover {
+    background-color: #5d34ff;
+  }
+}
 
+#editbio{
+  caret-color: $lila;
+  border: none;
+  border-bottom: 2px solid $lila;
+  font-size: 14pt;
+  background-color: inherit;
+  width: fit-content;
+  color: whitesmoke;
+  width: 100%;
+  margin-bottom: 20px;
 }

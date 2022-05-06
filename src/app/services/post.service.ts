@@ -22,8 +22,9 @@ export class PostService {
       .set(post);
   }
 
+  //3. Komplex lekérdezés
   getAll() {
-    return this.afs.collection<PostDB>(this.collectionName).valueChanges();
+    return this.afs.collection<PostDB>(this.collectionName, (ref)=>ref.orderBy('id',"desc")).valueChanges();
   }
 
   //2. Komplex lekérdezés

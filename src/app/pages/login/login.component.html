@@ -9,6 +9,7 @@
     <mat-form-field appearance="fill">
       <!-- 3. material label-->
       <mat-label>Enter your email</mat-label>
+      <!-- 4. material matInput-->
       <input
         matInput
         placeholder="valami@valami.com"
@@ -34,16 +35,16 @@
         [attr.aria-label]="'Hide password'"
         [attr.aria-pressed]="hide"
       >
-        <!-- 4. material icon-->
+        <!-- 5. material icon-->
         <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
       </button>
-      <!-- 5. material hint-->
+      <!-- 6. material hint-->
       <mat-hint>{{ passwd.value?.length || 0 }}/10</mat-hint>
     </mat-form-field>
 
     <mat-divider style="background-color: aliceblue"></mat-divider>
 
-    <!-- 6. material tooltip-->
+    <!-- 7. material tooltip-->
     <input
       matTooltip="Login button"
       type="submit"
