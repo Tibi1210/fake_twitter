@@ -44,14 +44,16 @@
 
     <mat-divider style="background-color: aliceblue"></mat-divider>
 
-    <!-- 7. material tooltip-->
-    <input
-      matTooltip="Login button"
-      type="submit"
-      class="btnSubmit"
-      value="Login"
-    />
-
+    <!-- 7. material ripple-->
+    <div matRipple [matRippleColor]="'whitesmoke'" class="rippleclass">
+      <!-- 8. material tooltip-->
+      <input
+        matTooltip="Login button"
+        type="submit"
+        class="btnSubmit"
+        value="Login"
+      />
+    </div>
     <div>
       Don't have an account?
       <a [routerLink]="'/register'" class="btnForgetPwd registerlink"

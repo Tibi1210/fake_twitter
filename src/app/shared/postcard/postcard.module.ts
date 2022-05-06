@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { PostcardComponent } from './postcard.component';
 import { TweetcardModule } from '../tweetcard/tweetcard.module';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 
 
@@ -15,7 +16,8 @@ import { TweetcardModule } from '../tweetcard/tweetcard.module';
     CommonModule,
     ReactiveFormsModule,
     RouterModule,
-    TweetcardModule
+    TweetcardModule,
+    MatAutocompleteModule
   ],
   exports:[
     PostcardComponent

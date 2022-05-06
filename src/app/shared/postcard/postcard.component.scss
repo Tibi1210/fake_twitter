@@ -3,7 +3,7 @@ $vilagosszurke: #333639;
 $btn_szurke: #6e6e6e;
 $lila: #7856ff;
 
-table{
+table {
   width: 100%;
   margin-top: 20px;
 }
@@ -94,12 +94,24 @@ img {
   grid-area: 1 / 1 / 2 / 2;
 }
 
+
+.autocomplete {
+  background-color: black;
+  color: whitesmoke;
+  
+}
+.autocomplete:hover {
+  background-color: $lila;
+  color: black;
+}
+
+
 .post {
   float: right;
   width: max-content;
   border-radius: 50px;
   text-align: center;
-  
+
   input {
     padding: 5px 30px 5px 30px;
     border: none;
@@ -112,4 +124,3 @@ img {
     background-color: #5d34ff;
   }
 }
-

@@ -21,6 +21,8 @@ export class PostcardComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  options:Array<string>=["My first tweet!","Hello twitter!","Random tweet."];
+
   createForm(model: Post) {
     let fg = this.fb.group(model);
     fg.get('text')?.addValidators([Validators.required]);

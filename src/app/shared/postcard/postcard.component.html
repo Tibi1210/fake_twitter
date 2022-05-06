@@ -20,8 +20,15 @@
             placeholder="What's happening?"
             formControlName="text"
             onInput="this.parentNode.dataset.replicatedValue = this.value"
+            [matAutocomplete]="auto"
           ></textarea>
         </div>
+        <!-- 9. material autocomplete-->
+        <mat-autocomplete #auto="matAutocomplete" >
+          <mat-option class="autocomplete" *ngFor="let option of options" [value]="option" >
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
       </td>
     </tr>
     <tr>

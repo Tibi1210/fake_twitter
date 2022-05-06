@@ -8,19 +8,17 @@ $lila: #7856ff;
   border-radius: 25px;
 }
 
-mat-form-field{
+mat-form-field {
   font-size: 12pt;
   width: 100%;
   margin-bottom: 10px;
 }
-mat-label{
+mat-label {
   color: whitesmoke;
 }
-button{
+button {
   background-color: whitesmoke;
 }
-
-
 
 .image {
   margin: 0 auto 0 auto;
@@ -48,9 +46,16 @@ h3 {
   border-radius: 25px;
   padding: 2%;
   font-weight: bolder;
+  font-size: 16pt;
+}
+
+.rippleclass {
+  height: max-content;
+  width: 100%;
+  background-color: white;
   margin-top: 10px;
   margin-bottom: 20px;
-  font-size: 16pt;
+  border-radius: 25px;
 }
 
 .btnSubmit:hover {
