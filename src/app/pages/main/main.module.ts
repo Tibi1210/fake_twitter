@@ -11,11 +11,14 @@ import { TopsearchModule } from 'src/app/shared/topsearch/topsearch.module';
 import { RightboxModule } from 'src/app/shared/rightbox/rightbox.module';
 import { BottommenuModule } from 'src/app/shared/bottommenu/bottommenu.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { DateFormatPipe } from 'src/app/pipes/date-format.pipe';
+import { DateFormatModuleModule } from 'src/app/pipes/date-format-module/date-format-module.module';
 
 
 @NgModule({
   declarations: [
-    MainComponent
+    MainComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -27,7 +30,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     TopsearchModule,
     RightboxModule,
     BottommenuModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    DateFormatModuleModule
   ]
 })
 export class MainModule { }

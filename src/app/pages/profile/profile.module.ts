@@ -12,11 +12,13 @@ import { RightboxModule } from 'src/app/shared/rightbox/rightbox.module';
 import { BottommenuModule } from 'src/app/shared/bottommenu/bottommenu.module';
 import { PostcardModule } from 'src/app/shared/postcard/postcard.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { DateFormatPipe } from 'src/app/pipes/date-format.pipe';
+import { DateFormatModuleModule } from 'src/app/pipes/date-format-module/date-format-module.module';
 
 
 @NgModule({
   declarations: [
-    ProfileComponent
+    ProfileComponent,
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     RightboxModule,
     BottommenuModule,
     PostcardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    DateFormatModuleModule
   ]
 })
 export class ProfileModule { }

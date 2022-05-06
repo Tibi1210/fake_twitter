@@ -7,7 +7,9 @@ $lila: #7856ff;
   border-color: $lila;
   border-radius: 25px;
 }
-
+mat-hint {
+  color: whitesmoke;
+}
 mat-form-field {
   font-size: 12pt;
   width: 100%;

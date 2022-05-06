@@ -12,7 +12,7 @@ import { PostService } from 'src/app/services/post.service';
 export class MainComponent implements OnInit {
   constructor(
     private authService: AuthService,
-    private postService: PostService
+    private postService: PostService,
   ) {}
 
   asd: PostDB[] = [];

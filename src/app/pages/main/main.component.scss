@@ -72,6 +72,8 @@ img {
 .name {
   font-weight: bold;
   margin-left: 10px;
+  float: left;
+  color: whitesmoke;
 }
 .name:hover {
   font-weight: bold;
@@ -141,6 +143,13 @@ img {
     background-color: rgba(29, 155, 240,0.3);
     text-shadow: 2px 2px 4px black;
   }
+}
+
+.dateDiv{
+display: block;
+float: left;
+margin-left: 5px;
+color: $vilagosszurke;
 }
 
 

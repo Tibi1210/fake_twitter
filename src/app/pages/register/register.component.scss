@@ -7,20 +7,20 @@ $lila: #7856ff;
   border-color: $lila;
   border-radius: 25px;
 }
-
-mat-form-field{
+mat-hint {
+  color: whitesmoke;
+}
+mat-form-field {
   font-size: 12pt;
   margin-bottom: 10px;
   width: 100%;
 }
-mat-label{
+mat-label {
   color: whitesmoke;
 }
-button{
+button {
   background-color: whitesmoke;
 }
-
-
 
 .rowmargin {
   margin-top: 10%;
@@ -57,12 +57,11 @@ h3 {
 }
 
 .btnSubmit:hover {
-    color: whitesmoke;
-    background-color: $lila;
-    border-color: $lila;
-  }
+  color: whitesmoke;
+  background-color: $lila;
+  border-color: $lila;
+}
 
-  
 .btnForgetPwd {
   color: whitesmoke;
   text-decoration: none;
@@ -72,5 +71,5 @@ h3 {
 
 .btnForgetPwd:hover {
   color: $lila;
-    text-decoration: underline;
-  }
+  text-decoration: underline;
+}

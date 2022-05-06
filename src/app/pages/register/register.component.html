@@ -4,7 +4,7 @@
     <div class="image"><img src="../../../assets/image/logo.png" /></div>
     <h3>Register</h3>
     <mat-form-field appearance="fill">
-      <mat-label>Enter your Username</mat-label>
+      <mat-label>Enter your Username (min 5)</mat-label>
       <input
         matInput
         placeholder="Username"
@@ -14,7 +14,7 @@
     </mat-form-field>
     <br />
     <mat-form-field appearance="fill">
-      <mat-label>Enter your @UserTag</mat-label>
+      <mat-label>Enter your @UserTag (min 5)</mat-label>
       <input
         matInput
         placeholder="@somebody"
@@ -34,7 +34,7 @@
     ><br />
 
     <mat-form-field appearance="fill">
-      <mat-label>Enter your password</mat-label>
+      <mat-label>Enter your password (min 10)</mat-label>
       <input
         matInput
         formControlName="passwd"
@@ -54,7 +54,7 @@
     ><br />
 
     <mat-form-field appearance="fill">
-      <mat-label>Comfirm your password</mat-label>
+      <mat-label>Comfirm your password (min 10)</mat-label>
       <input
         matInput
         formControlName="passwd_comfirm"
@@ -64,7 +64,12 @@
       <mat-hint>{{ passwd_c.value?.length || 0 }}/10</mat-hint> </mat-form-field
     ><br />
 
-    <input matTooltip="Register Button" type="submit" class="btnSubmit" value="Register" />
+    <input
+      matTooltip="Register Button"
+      type="submit"
+      class="btnSubmit"
+      value="Register"
+    />
 
     <label>Already have an account?</label>
     <a [routerLink]="'/login'" class="btnForgetPwd">Log in</a>

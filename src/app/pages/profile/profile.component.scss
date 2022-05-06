@@ -1,17 +1,17 @@
-.sticky{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 30px;
-    font-size: 20px;
-    height: auto;
-    height: fit-content;
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30px;
+  font-size: 20px;
+  height: auto;
+  height: fit-content;
 }
 
-.sticky-top{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 2;
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
 }
 
 $szurke: #080808;
@@ -41,7 +41,14 @@ a:hover {
   height: fit-content;
 }
 
-table{
+.dateDiv {
+  display: block;
+  float: left;
+  margin-left: 5px;
+  color: $vilagosszurke;
+}
+
+table {
   width: 100%;
 }
 
@@ -60,7 +67,7 @@ img {
   }
 }
 
-.leftcol{
+.leftcol {
   width: 50px;
 }
 
@@ -72,7 +79,10 @@ img {
 .name {
   font-weight: bold;
   margin-left: 10px;
+  float: left;
+  color: whitesmoke;
 }
+
 .name:hover {
   font-weight: bold;
   text-decoration: underline;
@@ -84,22 +94,22 @@ img {
 }
 
 .like {
-    margin: 0 auto 0 auto;
-    width: max-content;
-    border-radius: 50px;
-    text-align: center;
-    cursor: pointer;
-    a {
-      padding: 3px 20px 3px 20px;
-      color: $btn_szurke;
-    }
-    a:hover {
-      color: red;
-      border-radius: 50px;
-      background-color: rgba(255, 0, 0,0.3);
-      text-shadow: 2px 2px 4px black;
-    }
+  margin: 0 auto 0 auto;
+  width: max-content;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  a {
+    padding: 3px 20px 3px 20px;
+    color: $btn_szurke;
   }
+  a:hover {
+    color: red;
+    border-radius: 50px;
+    background-color: rgba(255, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px black;
+  }
+}
 
 .comment {
   margin: 0 auto 0 auto;
@@ -114,7 +124,7 @@ img {
   a:hover {
     color: #1d9bf0;
     border-radius: 50px;
-    background-color: rgba(29, 155, 240,0.3);
+    background-color: rgba(29, 155, 240, 0.3);
     text-shadow: 2px 2px 4px black;
   }
 }
